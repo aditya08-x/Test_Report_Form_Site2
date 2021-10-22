@@ -160,14 +160,14 @@ def get_pix_map_for_BDH(out_file, X, Y):
 
 
 def get_all_pixmap(out_file, X, Y, approving_authority):
-    if approving_authority == "Zahid Raza":
-        stamp = get_stamp("ZahidnewSign.pickle")
-        name_list = ["Zahid Raza", "Approving Authority","(Signature of Authorized person"]
+    if approving_authority == "Avishek Kumar":
+        stamp = get_stamp("avhisheknewSign.pickle")
+        name_list = ["Avishek Kumar", "Approving Authority","(Signature of Authorized person"]
         xx = 1
-    else:
-        stamp = get_stamp("ShashankRaghubanshiSign.pickle")
-        name_list = ["Shashank Raghubanshi", "Approving Authority", "(Signature of Authorized person"]
-        xx = 0
+    # else:
+    #     stamp = get_stamp("ShashankRaghubanshiSign.pickle")
+    #     name_list = ["Shashank Raghubanshi", "Approving Authority", "(Signature of Authorized person"]
+    #     xx = 0
     pixmap = stamp["pixmap"]
     stamp_height = stamp["height"]
     stamp_widht = stamp["width"]
@@ -286,9 +286,9 @@ def func(request_json):
         "Tripti Tiwari": "triptiSign.pickel",
         "Kajal Jha": "kahajSign.pickel",
         "Gaurav Goswami": "GauravGoswamiSign.pickle",
+        "Amrita Kumari":"AmritaKumariSign.pickle"
     }
-    # get_stamp(test_engineer_dict["Zahid Raza"], r"C:\Users\aditya.verma\Desktop\ZahidSign.pdf")
-    # get_stamp(test_engineer_dict["Ankit Kumar"], r"C:\Users\aditya.verma\Desktop\ankitSign.pdf")
+
     # get_stamp(test_engineer_dict["Mohit"], r"C:\Users\aditya.verma\Desktop\mohitSign.pdf")
     # get_stamp(test_engineer_dict["Jatin Dalal"], r"C:\Users\aditya.verma\Desktop\jatinSign.pdf")
     # get_stamp(test_engineer_dict["Avishek Kumar"], r"C:\Users\aditya.verma\Desktop\reportwala\Avisheksign.pdf")
@@ -331,6 +331,8 @@ def func(request_json):
 
 if __name__ == "__main__":
     pass
+    # get_stamp("avhisheknewSign.pickle", r"C:\Users\aditya.verma\Desktop\reportwala\avhisheknewSign.pdf")
+    get_stamp("AmritaKumariSign.pickle", r"C:\Users\aditya.verma\Desktop\reportwala\amritya.pdf")
     # get_letterhead("letterheadsite2.pickle")
     # get_stamp("letterheadsite2.pickle", r"C:\Users\aditya.verma\Desktop\reportwala\Letterheadsite2.pdf")
     # get_stamp("ShashankRaghubanshiSign.pickle", r"C:\Users\aditya.verma\Desktop\reportwala\ShashankRaghubanshiSign.pdf")
